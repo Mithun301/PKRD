@@ -4,12 +4,17 @@ import { loginData } from '../testData/loginData';
 import { NavigateFeature } from '../pageObject/navigateFeature';
 import {ExpressPage} from '../pageObject/express';
 
-const amount = '100';
+const amount = "100";
+const NetworkFee = .55;
+const KnowledgeFees = .65;
+const InnovationFees = amount * 0.015 ;
+
+
 
 
 test.describe('Log In Tests', () => {
     let login;
-    let feature;
+    let feature
     let express;
     test.beforeEach(async ({ page }) => {
         login = new LogInPage(page);
@@ -46,7 +51,7 @@ test.describe('Log In Tests', () => {
         await express.inputAmount(amount);
         //await express.verifyTotalAmount(amount);
         await express.clickPayButton();
-        await express.verifyReceiveAmount(amount);
+        await express.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
         await express.clickProceedButton();
     });
 

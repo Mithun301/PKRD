@@ -81,7 +81,7 @@
         {
           "title": "Log In Tests",
           "file": "test.spec.js",
-          "line": 10,
+          "line": 15,
           "column": 6,
           "specs": [
             {
@@ -100,7 +100,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12749,
+                      "duration": 12159,
                       "errors": [],
                       "stdout": [
                         {
@@ -118,7 +118,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-21T09:18:17.888Z",
+                      "startTime": "2026-08-21T15:26:09.828Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -128,7 +128,7 @@
               ],
               "id": "31be70adcd52654ff551-b078ffbac38f82ae5b64",
               "file": "test.spec.js",
-              "line": 39,
+              "line": 44,
               "column": 9
             }
           ]
@@ -138,8 +138,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-21T09:18:16.559Z",
-    "duration": 15890.488,
+    "startTime": "2026-08-21T15:26:08.789Z",
+    "duration": 14435.684,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

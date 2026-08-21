@@ -56,11 +56,12 @@ export class ExpressPage {
 
     }
     
-    async verifyReceiveAmount(amount){
+    async verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees){
 
+   
         const actualFeeText = await this.page.locator("//span[normalize-space()='Fee']/parent::div/following-sibling::span").textContent();
         const actualFee = Number(  actualFeeText?.replace(/[^\d.-]/g, ""));
-        const expectedFee = Number( (amount * 0.015 + 0.55 + 0.65).toFixed(2));
+        const expectedFee = Number( ( NetworkFee + KnowledgeFees + InnovationFees).toFixed(2));
 
         const receiveAmountText = await this.page.locator("//span[normalize-space()='You Receive']/following-sibling::span ").textContent();
         const receiveAmount = Number (receiveAmountText?.replace(/[^\d.-]/g, ""));
