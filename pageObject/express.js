@@ -75,7 +75,6 @@ export class ExpressPage {
 expect(actualFee).toEqual(expectedFee);
 expect(expectReceiveAmount).toEqual(receiveAmount);
 
-
     }
 
 

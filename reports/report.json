@@ -81,7 +81,7 @@
         {
           "title": "Log In Tests",
           "file": "test.spec.js",
-          "line": 15,
+          "line": 16,
           "column": 6,
           "specs": [
             {
@@ -100,25 +100,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12159,
+                      "duration": 9891,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Actual Fee: \u001b[33m2.7\u001b[39m\n"
-                        },
-                        {
-                          "text": "Expected Fee: \u001b[33m2.7\u001b[39m\n"
-                        },
-                        {
-                          "text": " Receive Amount \u001b[33m97.3\u001b[39m\n"
-                        },
-                        {
-                          "text": "Receive \u001b[33m97.3\u001b[39m\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-21T15:26:09.828Z",
+                      "startTime": "2026-08-21T15:55:21.219Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -128,7 +115,7 @@
               ],
               "id": "31be70adcd52654ff551-b078ffbac38f82ae5b64",
               "file": "test.spec.js",
-              "line": 44,
+              "line": 47,
               "column": 9
             }
           ]
@@ -138,8 +125,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-21T15:26:08.789Z",
-    "duration": 14435.684,
+    "startTime": "2026-08-21T15:55:20.172Z",
+    "duration": 12772.041,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

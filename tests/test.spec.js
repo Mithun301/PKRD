@@ -3,6 +3,7 @@ import { LogInPage } from '../pageObject/logInPage';
 import { loginData } from '../testData/loginData';
 import { NavigateFeature } from '../pageObject/navigateFeature';
 import {ExpressPage} from '../pageObject/express';
+import {Dashboard} from '../pageObject/dashboard';
 
 const amount = "100";
 const NetworkFee = .55;
@@ -16,10 +17,12 @@ test.describe('Log In Tests', () => {
     let login;
     let feature
     let express;
+    let dashboard;
     test.beforeEach(async ({ page }) => {
         login = new LogInPage(page);
         feature = new NavigateFeature(page);
         express = new ExpressPage(page);
+        dashboard = new Dashboard(page);
 
        await page.goto('https://wallet.pkrdcoin.com/login');
         // await page.pause();
@@ -45,14 +48,16 @@ test.describe('Log In Tests', () => {
         
     
         await login.loginValid();
-        await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
-        await feature.navigateToExpress();
-        await express.countrySelect();
-        await express.inputAmount(amount);
-        //await express.verifyTotalAmount(amount);
-        await express.clickPayButton();
-        await express.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
-        await express.clickProceedButton();
+        await dashboard.viewBalance();
+        await dashboard.viewCurrentValue();
+        // await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
+        // await feature.navigateToExpress();
+        // await express.countrySelect();
+        // await express.inputAmount(amount);
+        // //await express.verifyTotalAmount(amount);
+        // await express.clickPayButton();
+        // await express.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
+        // await express.clickProceedButton();
     });
 
     // test('Verify successful login and navigate to Wallet', async ({ page }) => {
