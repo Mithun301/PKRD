@@ -17,7 +17,7 @@ test.describe('Log In Tests', () => {
         express = new ExpressPage(page);
 
        await page.goto('https://wallet.pkrdcoin.com/login');
-         await page.pause();
+        // await page.pause();
     });
 //  test('Verify  login with Invalid Email', async ({ page }) => {
         
@@ -44,7 +44,9 @@ test.describe('Log In Tests', () => {
         await feature.navigateToExpress();
         await express.countrySelect();
         await express.inputAmount(amount);
+        //await express.verifyTotalAmount(amount);
         await express.clickPayButton();
+        await express.verifyReceiveAmount(amount);
         await express.clickProceedButton();
     });
 

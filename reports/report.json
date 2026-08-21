@@ -1,8 +1,13 @@
 {
   "config": {
-    "argv": [],
-    "configFile": "C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\playwright.config.js",
-    "rootDir": "C:/Users/mithu/OneDrive/Desktop/New folder (2)/PKRD/tests",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Automation\\PKRD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--headed"
+    ],
+    "configFile": "D:\\Automation\\PKRD\\playwright.config.js",
+    "rootDir": "D:/Automation/PKRD/tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -18,7 +23,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/mithu/OneDrive/Desktop/New folder (2)/PKRD/test-results",
+        "outputDir": "D:/Automation/PKRD/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -26,7 +31,7 @@
         },
         "id": "Chromium",
         "name": "Chromium",
-        "testDir": "C:/Users/mithu/OneDrive/Desktop/New folder (2)/PKRD/tests",
+        "testDir": "D:/Automation/PKRD/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -60,9 +65,9 @@
     "shard": null,
     "tags": [],
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.62.1",
-    "workers": 6,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
@@ -81,7 +86,7 @@
           "specs": [
             {
               "title": "Verify successful login and navigate to Express",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -94,53 +99,31 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 47900,
-                      "error": {
-                        "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//input[@name=\\'email\\']')\u001b[22m\n",
-                        "stack": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//input[@name=\\'email\\']')\u001b[22m\n\n    at LogInPage.loginValid (C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\pageObject\\logInPage.js:16:31)\n    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\tests\\test.spec.js:42:21)\n    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:15)\n    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:17)\n    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:22)",
-                        "location": {
-                          "file": "C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\pageObject\\logInPage.js",
-                          "column": 31,
-                          "line": 16
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\pageObject\\logInPage.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m loginValid(email\u001b[33m=\u001b[39m loginData\u001b[33m.\u001b[39mvalid\u001b[33m.\u001b[39m\u001b[33mEmail\u001b[39m\u001b[33m,\u001b[39m password\u001b[33m=\u001b[39m loginData\u001b[33m.\u001b[39mvalid\u001b[33m.\u001b[39m\u001b[33mPassword\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Next'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpasswordInput\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mloginButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m \u001b[0m"
-                      },
-                      "errors": [
+                      "status": "passed",
+                      "duration": 12749,
+                      "errors": [],
+                      "stdout": [
                         {
-                          "location": {
-                            "file": "C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\pageObject\\logInPage.js",
-                            "column": 31,
-                            "line": 16
-                          },
-                          "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//input[@name=\\'email\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pageObject\\logInPage.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m loginValid(email\u001b[33m=\u001b[39m loginData\u001b[33m.\u001b[39mvalid\u001b[33m.\u001b[39m\u001b[33mEmail\u001b[39m\u001b[33m,\u001b[39m password\u001b[33m=\u001b[39m loginData\u001b[33m.\u001b[39mvalid\u001b[33m.\u001b[39m\u001b[33mPassword\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Next'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpasswordInput\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mloginButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m \u001b[0m\n\u001b[2m    at LogInPage.loginValid (C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\pageObject\\logInPage.js:16:31)\u001b[22m\n\u001b[2m    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\tests\\test.spec.js:42:21)\u001b[22m\n\u001b[2m    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1644:15)\u001b[22m\n\u001b[2m    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:17)\u001b[22m\n\u001b[2m    at C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1642:22)\u001b[22m"
+                          "text": "Actual Fee: \u001b[33m2.7\u001b[39m\n"
+                        },
+                        {
+                          "text": "Expected Fee: \u001b[33m2.7\u001b[39m\n"
+                        },
+                        {
+                          "text": " Receive Amount \u001b[33m97.3\u001b[39m\n"
+                        },
+                        {
+                          "text": "Receive \u001b[33m97.3\u001b[39m\n"
                         }
                       ],
-                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-19T09:52:45.230Z",
+                      "startTime": "2026-08-21T09:18:17.888Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\test-results\\test-Log-In-Tests-Verify-s-28eff-gin-and-navigate-to-Express-Chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\test-results\\test-Log-In-Tests-Verify-s-28eff-gin-and-navigate-to-Express-Chromium\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\mithu\\OneDrive\\Desktop\\New folder (2)\\PKRD\\pageObject\\logInPage.js",
-                        "column": 31,
-                        "line": 16
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "31be70adcd52654ff551-b078ffbac38f82ae5b64",
@@ -155,11 +138,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-19T09:52:43.984Z",
-    "duration": 45931.527,
-    "expected": 0,
+    "startTime": "2026-08-21T09:18:16.559Z",
+    "duration": 15890.488,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

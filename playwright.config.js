@@ -38,9 +38,9 @@ module.exports = defineConfig({
 
     headless: false,
 
-    // launchOptions: {
-    //   slowMo: 500, 
-    // },
+    launchOptions: {
+      slowMo: 500, 
+    },
   
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
