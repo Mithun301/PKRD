@@ -15,5 +15,6 @@ export class WalletPage {
         await this.clickContinueButton.click();
         await this.inputAmount.fill('10');
         await this.clickSendButton.click();
+        
     }
 }
