@@ -81,201 +81,9 @@
         {
           "title": "Log In Tests",
           "file": "test.spec.js",
-          "line": 18,
+          "line": 19,
           "column": 6,
           "specs": [
-            {
-              "title": "Verify  login with Invalid Email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9425,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:14:43.991Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-723b39b399e7c39d07e1",
-              "file": "test.spec.js",
-              "line": 38,
-              "column": 6
-            },
-            {
-              "title": "Verify  login with Invalid Password  ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9843,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:14:54.029Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-0d63465831448109559e",
-              "file": "test.spec.js",
-              "line": 46,
-              "column": 10
-            },
-            {
-              "title": "Verify successful login ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 18819,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:15:03.892Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-db331a9387a563445503",
-              "file": "test.spec.js",
-              "line": 54,
-              "column": 6
-            },
-            {
-              "title": "Verify successful login and navigate to Express",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 23456,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Raw Exchange Rate Text: 1.00\n"
-                        },
-                        {
-                          "text": "Raw expect Amount Text: 100.00\n"
-                        },
-                        {
-                          "text": "Raw Actual Amount Text: 100.00\n"
-                        },
-                        {
-                          "text": "Actual Fee: \u001b[33m2.7\u001b[39m\n"
-                        },
-                        {
-                          "text": "Expected Fee: \u001b[33m2.7\u001b[39m\n"
-                        },
-                        {
-                          "text": " Receive Amount \u001b[33m97.3\u001b[39m\n"
-                        },
-                        {
-                          "text": "Receive \u001b[33m97.3\u001b[39m\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:15:22.732Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-b078ffbac38f82ae5b64",
-              "file": "test.spec.js",
-              "line": 65,
-              "column": 8
-            },
-            {
-              "title": "Verify successful login and navigate to Wallet",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 22060,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:15:46.205Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-e1c30563159ec424414f",
-              "file": "test.spec.js",
-              "line": 79,
-              "column": 9
-            },
             {
               "title": "Verify successful login and navigate to Swap",
               "ok": true,
@@ -292,12 +100,25 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17939,
+                      "duration": 15709,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "exchange rate: 1\n"
+                        },
+                        {
+                          "text": "Expected Fee: \u001b[33m2.7\u001b[39m\n"
+                        },
+                        {
+                          "text": "Expected Amount Value: 97.3\n"
+                        },
+                        {
+                          "text": "Actual Amount Value: \u001b[33m97.3\u001b[39m\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-29T06:16:08.284Z",
+                      "startTime": "2026-08-30T10:16:49.617Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -307,109 +128,7 @@
               ],
               "id": "31be70adcd52654ff551-a988b067cd3bbc6969b8",
               "file": "test.spec.js",
-              "line": 88,
-              "column": 10
-            },
-            {
-              "title": "Verify successful login and navigate to P2P",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 18335,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:16:26.238Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-d424aa29859ad5d005f7",
-              "file": "test.spec.js",
-              "line": 97,
-              "column": 10
-            },
-            {
-              "title": "Verify successful login and navigate to Merchant",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 17859,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:16:44.594Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-89beaaeeaf0b91bb5a70",
-              "file": "test.spec.js",
-              "line": 105,
-              "column": 10
-            },
-            {
-              "title": "Verify successful login and navigate to Redeem",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 17960,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-29T06:17:02.470Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "31be70adcd52654ff551-828dd400e03610ae05d3",
-              "file": "test.spec.js",
-              "line": 114,
+              "line": 91,
               "column": 10
             }
           ]
@@ -419,9 +138,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-29T06:14:43.316Z",
-    "duration": 157646.737,
-    "expected": 9,
+    "startTime": "2026-08-30T10:16:48.819Z",
+    "duration": 17327.107,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
