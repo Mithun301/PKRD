@@ -29,16 +29,17 @@ async verifyAmount(amount){
 
 
 
-  const rawConvertedAmount = exchangeRate * amount;
+  
    const expectedFee = 1 + 1 + (amount * 0.01);
-   const expectedAmountValue = parseFloat((rawConvertedAmount - expectedFee).toFixed(2));
+   const AmountValue = parseFloat((amount - expectedFee).toFixed(2));
+   const expectedAmountValue = exchangeRate * AmountValue;
 
   
   
   console.log("Parsed Exchange Rate:", exchangeRate);
-  console.log("Expected Amount Value:", rawConvertedAmount);
+  console.log("Expected Amount Value:", expectedAmountValue);
   console.log("Expected Fee:", expectedFee);
-   console.log("Expected Amount Value:", expectedAmountValue);
+   console.log("Expected Amount Value:", AmountValue);
   console.log("Actual Amount Value:", actualAmountValue);
 
 

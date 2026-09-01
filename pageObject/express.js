@@ -13,30 +13,39 @@ export class ExpressPage {
 
     }
 
-
-    async clickCountryDropdownButton() {
-        await this.clickCountryDropdown.click();
+ async ExpressPayment(amount,NetworkFee,KnowledgeFees,InnovationFees){
+    
+        await this.countrySelect();
+        await this.enterAmount.fill(amount);
+        await this.verifyTotalAmount(amount);
+         await this.payButton.click();
+        await this.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
+        await this.clickProceedButton();
     }
+
+ 
+
+
+
+    // async clickCountryDropdownButton() {
+    //     await this.clickCountryDropdown.click();
+    // }
     async countrySelect() {
-        await this.clickCountryDropdownButton();
+        await this.clickCountryDropdown.click();
         const count = await this.selectCountry.count();
         const randomIndex = Math.floor(Math.random() * count);
         await this.selectCountry.nth(randomIndex).click();
-        
 
-
-
-        
     }
-    async inputAmount(amount) {
-        await this.enterAmount.fill(amount);
-    }
-    async clickPayButton() {
-        await this.payButton.click();
-    }
-    async clickProceedButton() {
-        await this.proceedButton.click();
-    }   
+    // async inputAmount(amount) {
+    //     await this.enterAmount.fill(amount);
+    // }
+    // async clickPayButton() {
+    //     await this.payButton.click();
+    // }
+    // async clickProceedButton() {
+    //     await this.proceedButton.click();
+    // }   
 
     async verifyTotalAmount(amount){
 
