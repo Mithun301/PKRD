@@ -91,8 +91,8 @@ test.describe('Log In Tests', () => {
         await login.loginValid();
         await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
         await feature.navigateToSwap();
-        await swap.swapCoin(amount);
-        await swap.verifyTotalAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
+        await swap.swapCoin(amount,NetworkFee,KnowledgeFees,InnovationFees);
+   
     });
 
 

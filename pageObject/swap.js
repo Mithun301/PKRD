@@ -10,12 +10,12 @@ export class SwapPage {
 
     }
      
-    async swapCoin(amount) {
-        await this.enteramount.click();
+    async swapCoin(amount,NetworkFee,KnowledgeFees,InnovationFees){ 
+     
         await this.enteramount.fill(amount);
+        await this.verifyTotalAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
         await this.swapButton.click();
-        
-      //  await this.confirmButton.click();
+        await this.confirmButton.click();
     }
 
     async verifyTotalAmount(amount,NetworkFee,KnowledgeFees,InnovationFees){
