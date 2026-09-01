@@ -6,6 +6,8 @@ import {ExpressPage} from '../pageObject/express';
 import {Dashboard} from '../pageObject/dashboard';
 import {WalletPage} from '../pageObject/wallet';
 import {SwapPage} from '../pageObject/swap';
+import { RedeemPage } from '../pageObject/redeem';
+
 
 const amount = "100";
 const NetworkFee = .55;
@@ -23,6 +25,7 @@ test.describe('Log In Tests', () => {
     let dashboard;
     let wallet;
     let swap;
+    let redeem;
     test.beforeEach(async ({ page }) => {
         login = new LogInPage(page);
         feature = new NavigateFeature(page);
@@ -30,6 +33,7 @@ test.describe('Log In Tests', () => {
         dashboard = new Dashboard(page);
         wallet = new WalletPage(page);
         swap = new SwapPage(page);
+        redeem = new RedeemPage(page);
 
        await page.goto('https://wallet.pkrdcoin.com/login');
         //  await page.pause();
@@ -88,15 +92,15 @@ test.describe('Log In Tests', () => {
 //         await wallet.sendFunds(walletAddress);
 //     });
 
-     test('Verify successful login and navigate to Swap', async ({ page }) => {
+    //  test('Verify successful login and navigate to Swap', async ({ page }) => {
         
        
-        await login.loginValid();
-        await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
-        await feature.navigateToSwap();
-        await swap.swapCoin(amount);
-        await swap.verifyTotalAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
-    });
+    //     await login.loginValid();
+    //     await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
+    //     await feature.navigateToSwap();
+    //     await swap.swapCoin(amount);
+    //     await swap.verifyTotalAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
+    // });
 
 
     //  test('Verify successful login and navigate to P2P', async ({ page }) => {
@@ -116,13 +120,14 @@ test.describe('Log In Tests', () => {
     // });
 
 
-    //  test('Verify successful login and navigate to Redeem', async ({ page }) => {
+     test('Verify successful login and navigate to Redeem', async ({ page }) => {
         
        
-    //     await login.loginValid();
-    //     await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
-    //     await feature.navigateToRedeem();
-    // });
+        await login.loginValid();
+        await expect(page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
+        await feature.navigateToRedeem();
+        await redeem.redeemCoin(amount);
+    });
 
 
     });

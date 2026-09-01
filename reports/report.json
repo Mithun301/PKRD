@@ -81,11 +81,11 @@
         {
           "title": "Log In Tests",
           "file": "test.spec.js",
-          "line": 19,
+          "line": 21,
           "column": 6,
           "specs": [
             {
-              "title": "Verify successful login and navigate to Swap",
+              "title": "Verify successful login and navigate to Redeem",
               "ok": true,
               "tags": [],
               "tests": [
@@ -100,25 +100,28 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 15709,
+                      "duration": 8670,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "exchange rate: 1\n"
+                          "text": "Parsed Exchange Rate: \u001b[33m1\u001b[39m\n"
                         },
                         {
-                          "text": "Expected Fee: \u001b[33m2.7\u001b[39m\n"
+                          "text": "Expected Amount Value: \u001b[33m100\u001b[39m\n"
                         },
                         {
-                          "text": "Expected Amount Value: 97.3\n"
+                          "text": "Expected Fee: \u001b[33m3\u001b[39m\n"
                         },
                         {
-                          "text": "Actual Amount Value: \u001b[33m97.3\u001b[39m\n"
+                          "text": "Expected Amount Value: \u001b[33m97\u001b[39m\n"
+                        },
+                        {
+                          "text": "Actual Amount Value: \u001b[33m97\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-30T10:16:49.617Z",
+                      "startTime": "2026-09-01T02:34:54.716Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -126,9 +129,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "31be70adcd52654ff551-a988b067cd3bbc6969b8",
+              "id": "31be70adcd52654ff551-828dd400e03610ae05d3",
               "file": "test.spec.js",
-              "line": 91,
+              "line": 123,
               "column": 10
             }
           ]
@@ -138,8 +141,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-30T10:16:48.819Z",
-    "duration": 17327.107,
+    "startTime": "2026-09-01T02:34:53.861Z",
+    "duration": 10303.148,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
