@@ -1,6 +1,7 @@
 import {  expect } from '@playwright/test';
 
 
+
 export class ExpressPage {
     constructor(page) {
         this.page = page;
@@ -32,9 +33,9 @@ export class ExpressPage {
     
         await this.countrySelect();
         await this.enterAmount.fill(amount);
-       // await this.verifyTotalAmount(amount);
-         await this.payButton.click();
-      //  await this.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
+        await this.verifyTotalAmount(amount);
+        await this.payButton.click();
+        await this.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
         await this.proceedButton.click();
         await this.confirmButton.click();
         await this.clickMethods.click();
@@ -68,16 +69,17 @@ export class ExpressPage {
 
   const exchangeRateText = await this.page.locator("//div[span[text()='Exchange Rate :']]/span[2]").textContent();
   const exchangeRate =  exchangeRateText?.split("≈").at(1)?.match(/\d+(?:\.\d+)?/)?.[0] ?? null;
-  const expectedAmount = (exchangeRate * amount).toFixed(2);
+  const expectedAmount = Number(    (exchangeRate * Number(amount)).toFixed(2));
 
-  const actualAmount = await this.page.locator("//div[span[normalize-space()='Amount :']]/span[2]").textContent();
- // const actualAmount = parseFloat(actualAmountText?.trim() || '2');
+ const actualAmountText = await this.page.locator("//div[span[normalize-space()='Amount :']]/span[2]").textContent();
+
+const actualAmount = Number(   actualAmountText?.replace(/[^0-9.]/g, ''));
 
   console.log('Raw Exchange Rate Text:', exchangeRate);
   console.log('Raw expect Amount Text:', expectedAmount);
   console.log('Raw Actual Amount Text:', actualAmount);
 
-  expect(actualAmount).toEqual(expectedAmount );
+  expect(actualAmount).toBeCloseTo(expectedAmount, 2);
 
 
     }
@@ -98,11 +100,13 @@ export class ExpressPage {
         console.log(" Receive Amount", receiveAmount);
         console.log("Receive", expectReceiveAmount);
 
-expect(actualFee).toEqual(expectedFee);
-expect(expectReceiveAmount).toEqual(receiveAmount);
+expect(actualFee).toBeCloseTo(expectedFee, 2);
+expect(expectReceiveAmount).toBeCloseTo(receiveAmount, 2);
 
     }
 
+
+    
 
 
 

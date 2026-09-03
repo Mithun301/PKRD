@@ -9,7 +9,7 @@ import {SwapPage} from '../pageObject/swap';
 import { RedeemPage } from '../pageObject/redeem';
 
 
-const amount = "100";
+const amount = "10";
 const NetworkFee = .55;
 const KnowledgeFees = .65;
 const InnovationFees = amount * 0.015 ;
@@ -72,10 +72,15 @@ test.describe('Log In Tests', () => {
    test('Verify successful login and navigate to Express', async ({ page }) => {            
        await login.loginValid();
       await  test.setTimeout(60000);
-        await dashboard.getCurrentValue();
-    //    await feature.navigateToExpress();
-    //    await express.ExpressPayment(amount,NetworkFee,KnowledgeFees,InnovationFees);
-    //     await dashboard.getCurrentValue();
+      await dashboard.viewCurrentValue();
+       const initialValue = await dashboard.getValue();
+        await feature.navigateToExpress();
+        await express.ExpressPayment(amount,NetworkFee,KnowledgeFees,InnovationFees);
+        await page.waitForTimeout(3000);
+         await dashboard.viewCurrentValue();
+         await dashboard.getCurrentValueAfterExpress();
+
+         await dashboard.verifyBalanceAfterExpress(amount,NetworkFee,KnowledgeFees,InnovationFees,initialValue);
 
 
 
