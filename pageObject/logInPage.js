@@ -1,5 +1,5 @@
 
-import{ loginData } from '../testData/loginData';
+import{ loginData, expect } from '../testData/loginData';
 
 export class LogInPage {
     constructor(page) {
@@ -17,6 +17,7 @@ export class LogInPage {
         await this.page.getByRole('button', { name: 'Next' }).click();
         await this.passwordInput.fill(password);
         await this.loginButton.click(); 
+     //    await expect(this.page).toHaveURL('https://wallet.pkrdcoin.com/app/dashboard');
         
     }
      async loginInvalidEmail(email= loginData.invalidEmail.Email, password= loginData.invalidEmail.Password) {

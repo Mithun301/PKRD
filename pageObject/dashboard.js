@@ -17,7 +17,18 @@ export class Dashboard {
     async viewCurrentValue(){
         await this.value.click();
     }
+  
+    async getCurrentValue() {
+        await this.value.click();
+        const valueLocator = this.page.locator("//h1[contains(text(),'Est. Total Value')]/following-sibling::h2");
 
+    const rawText = await valueLocator.textContent();
+    const currentValue = parseFloat(rawText.replace(/[^0-9.]/g, ''));
+
+    console.log("Current Value:", currentValue);
+    return currentValue;
 
 
 }
+}
+

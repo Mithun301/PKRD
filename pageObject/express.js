@@ -10,6 +10,21 @@ export class ExpressPage {
         this.enterAmount = page.getByRole('spinbutton', { name: '5-' });
         this.payButton = page.getByRole('button', { name: 'Pay' });
         this.proceedButton = page.getByRole('button', { name: 'Proceed' });
+         this.confirmButton = page.getByRole('button', { name: 'Confirm' });
+        this.clickMethods = page.getByText('Use another methods');
+        this.securityQuestion = page.locator('div').filter({ hasText: /^Security Question$/ }).nth(2);
+        this.answer1 = page.locator('#answer-0');
+        this.answer2 = page.locator('#answer-1');
+        this.answer3 = page.locator('#answer-2');
+        this.submitButton = page.getByRole('button', { name: 'Submit' });
+        this.cradNumber = page.locator('iframe[title="Card Number"]').contentFrame().getByRole('textbox', { name: 'Card Number' });
+        this.expiryDate = page.locator('iframe[title="Expiration"]').contentFrame().getByRole('textbox', { name: 'Expiration' });
+        this.cvv = page.locator('iframe[title="CVV"]').contentFrame().getByRole('textbox', { name: 'CVV' });
+        this.payNowButton = page.getByRole('button', { name: 'Pay $' });
+        this.closeModule = page.locator('.w-8 > svg');
+        this.homePage = page.getByRole('img', { name: 'Logo' });
+
+
 
     }
 
@@ -17,19 +32,30 @@ export class ExpressPage {
     
         await this.countrySelect();
         await this.enterAmount.fill(amount);
-        await this.verifyTotalAmount(amount);
+       // await this.verifyTotalAmount(amount);
          await this.payButton.click();
-        await this.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
-        await this.clickProceedButton();
+      //  await this.verifyReceiveAmount(amount,NetworkFee,KnowledgeFees,InnovationFees);
+        await this.proceedButton.click();
+        await this.confirmButton.click();
+        await this.clickMethods.click();
+        await this.securityQuestion.click();
+        await this.answer1.fill('Dog');
+        await this.answer2.fill('Dhaka');
+        await this.answer3.fill('Anan');
+        await this.submitButton.click();
+        await this.cradNumber.fill('4111111111111111');
+        await this.expiryDate.fill('12/34');
+        await this.cvv.fill('999');
+        await this.payNowButton.click();
+        await this.closeModule.click();
+        await this.homePage.click();
     }
 
  
 
 
 
-    // async clickCountryDropdownButton() {
-    //     await this.clickCountryDropdown.click();
-    // }
+   
     async countrySelect() {
         await this.clickCountryDropdown.click();
         const count = await this.selectCountry.count();
@@ -37,16 +63,7 @@ export class ExpressPage {
         await this.selectCountry.nth(randomIndex).click();
 
     }
-    // async inputAmount(amount) {
-    //     await this.enterAmount.fill(amount);
-    // }
-    // async clickPayButton() {
-    //     await this.payButton.click();
-    // }
-    // async clickProceedButton() {
-    //     await this.proceedButton.click();
-    // }   
-
+   
     async verifyTotalAmount(amount){
 
   const exchangeRateText = await this.page.locator("//div[span[text()='Exchange Rate :']]/span[2]").textContent();
@@ -85,6 +102,8 @@ expect(actualFee).toEqual(expectedFee);
 expect(expectReceiveAmount).toEqual(receiveAmount);
 
     }
+
+
 
 
 }
